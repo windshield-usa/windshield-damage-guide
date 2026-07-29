@@ -1,202 +1,1574 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Windshield Damage Guide | WindshieldHUB</title>
+  <title>Manhattan Windshield Damage Guide | Repair or Replace?</title>
+  <meta name="description" content="A practical Manhattan windshield guide covering repair vs replacement, New York inspection rules, insurance, ADAS calibration, and mobile service preparation.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="WindshieldHUB">
 
-  <meta
-    name="description"
-    content="Learn when windshield damage may require repair or replacement, why ADAS calibration matters, and what drivers should do after glass damage."
-  >
-<link
-  rel="canonical"
-  href="https://windshield-usa.github.io/windshield-damage-guide/"
->
-  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://windshield-usa.github.io/windshield-damage-guide/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Manhattan Windshield Damage Guide">
+  <meta property="og:description" content="Learn how to assess a chip or crack, understand New York inspection and insurance considerations, and prepare for mobile auto-glass service in Manhattan.">
+  <meta property="og:url" content="https://windshield-usa.github.io/windshield-damage-guide/">
+  <meta property="og:site_name" content="WindshieldHUB Auto Glass Resources">
+  <meta name="twitter:card" content="summary">
 
   <style>
+    :root {
+      --ink: #102a43;
+      --text: #334e68;
+      --muted: #627d98;
+      --line: #d9e2ec;
+      --soft: #f0f7ff;
+      --soft-2: #f7fafc;
+      --brand: #0878c9;
+      --brand-dark: #075f9e;
+      --accent: #ffb703;
+      --white: #ffffff;
+      --success: #157347;
+      --warning: #9a6700;
+      --danger: #b42318;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .10);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.7;
-      color: #1f2937;
-      background: #f5f7fa;
+    }
+
+    a {
+      color: var(--brand-dark);
+    }
+
+    a:hover {
+      color: var(--brand);
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 16px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
     }
 
     .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      width: min(1120px, calc(100% - 36px));
+      margin-inline: auto;
     }
 
-    h1, h2 {
-      color: #102a43;
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(217, 226, 236, .9);
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 1.05rem;
+      font-weight: 850;
+      text-decoration: none;
+      letter-spacing: -.02em;
+    }
+
+    .brand span {
+      color: var(--brand);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: .92rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: var(--brand);
+      color: var(--white);
+    }
+
+    .header-cta:hover {
+      color: var(--white);
+      background: var(--brand-dark);
+    }
+
+    .hero {
+      overflow: hidden;
+      padding: 76px 0 58px;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(8, 120, 201, .18), transparent 33%),
+        linear-gradient(140deg, #f8fbff 0%, #eef7ff 58%, #ffffff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 15px;
+      padding: 7px 12px;
+      border: 1px solid #b8d8ee;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .8);
+      color: var(--brand-dark);
+      font-size: .83rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -.035em;
     }
 
     h1 {
-      font-size: 38px;
-      line-height: 1.2;
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 4.9rem);
     }
 
-    .intro {
-      font-size: 19px;
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.85rem, 4vw, 3rem);
     }
 
-    .box {
-      background: #eef6ff;
-      border-left: 5px solid #1677c8;
-      padding: 20px;
-      margin: 25px 0;
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .hero-copy {
+      max-width: 740px;
+      margin: 22px 0 0;
+      color: #3e5c76;
+      font-size: clamp(1.05rem, 2vw, 1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
     }
 
     .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 14px 24px;
-      background: #1677c8;
-      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 12px 21px;
+      border: 2px solid transparent;
+      border-radius: 11px;
+      font-weight: 800;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      transition: .2s ease;
     }
 
-    .button:hover {
-      background: #0f5f9f;
+    .button-primary {
+      background: var(--brand);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(8, 120, 201, .20);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-1px);
+      background: var(--brand-dark);
+      color: var(--white);
+    }
+
+    .button-secondary {
+      border-color: #b8cbd9;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--brand);
+      color: var(--brand-dark);
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin: 24px 0 0;
+      padding: 0;
+      color: var(--muted);
+      list-style: none;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .trust-row li::before {
+      content: "✓";
+      margin-right: 7px;
+      color: var(--success);
+      font-weight: 900;
+    }
+
+    .hero-art {
+      position: relative;
+      min-height: 420px;
+      padding: 28px;
+      border: 1px solid rgba(184, 203, 217, .8);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .78);
+      box-shadow: var(--shadow);
+    }
+
+    .scene-label {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      z-index: 2;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(16, 42, 67, .88);
+      color: var(--white);
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .hero-art svg {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+    }
+
+    .quick-facts {
+      margin-top: -24px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .fact {
+      padding: 24px;
+    }
+
+    .fact + .fact {
+      border-left: 1px solid var(--line);
+    }
+
+    .fact strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .checker {
+      background: var(--soft-2);
+    }
+
+    .checker-layout {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 14px 34px rgba(16, 42, 67, .06);
+    }
+
+    .form-card {
+      padding: 28px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 17px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--ink);
+      font-size: .91rem;
+      font-weight: 800;
+    }
+
+    select {
+      width: 100%;
+      min-height: 48px;
+      padding: 10px 13px;
+      border: 1px solid #bcccdc;
+      border-radius: 9px;
+      background: var(--white);
+      color: var(--text);
+      font: inherit;
+    }
+
+    select:focus,
+    button:focus,
+    a:focus {
+      outline: 3px solid rgba(8, 120, 201, .24);
+      outline-offset: 2px;
+    }
+
+    .check-button {
+      min-height: 50px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--ink);
+      color: var(--white);
+      cursor: pointer;
+      font: inherit;
+      font-weight: 850;
+    }
+
+    .check-button:hover {
+      background: var(--brand-dark);
+    }
+
+    .result-card {
+      min-height: 100%;
+      padding: 31px;
+      background:
+        linear-gradient(145deg, rgba(8, 120, 201, .08), transparent 45%),
+        var(--white);
+    }
+
+    .result-label {
+      margin: 0 0 8px;
+      color: var(--brand-dark);
+      font-size: .82rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    #resultTitle {
+      margin-bottom: 12px;
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+    }
+
+    #resultText {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .disclaimer {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: #fff8df;
+      color: #6f5610;
+      font-size: .9rem;
+    }
+
+    .decision-grid,
+    .service-grid,
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .decision-card,
+    .service-card {
+      padding: 28px;
+    }
+
+    .decision-card ul,
+    .service-card ul,
+    .steps {
+      margin: 15px 0 0;
+      padding-left: 20px;
+    }
+
+    .decision-card li,
+    .service-card li,
+    .steps li {
+      margin-bottom: 8px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 850;
+      text-transform: uppercase;
+    }
+
+    .status-repair {
+      background: #e8f7ef;
+      color: var(--success);
+    }
+
+    .status-replace {
+      background: #fff0ed;
+      color: var(--danger);
+    }
+
+    .ny-rules {
+      background: var(--ink);
+      color: #d9e2ec;
+    }
+
+    .ny-rules h2,
+    .ny-rules h3 {
+      color: var(--white);
+    }
+
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .rule-card {
+      padding: 29px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .rule-card a {
+      color: #8dd1ff;
+    }
+
+    .callout {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 12px;
+      background: rgba(255, 183, 3, .11);
+    }
+
+    .local-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .prep-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .prep-list li {
+      position: relative;
+      padding: 17px 18px 17px 52px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+    }
+
+    .prep-list li::before {
+      content: counter(list-item);
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      display: grid;
+      width: 25px;
+      height: 25px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--brand);
+      color: var(--white);
+      font-size: .78rem;
+      font-weight: 900;
+    }
+
+    .neighborhood-box {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--soft);
+      border: 1px solid #c7e1f4;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      padding: 7px 10px;
+      border: 1px solid #b8d8ee;
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: .84rem;
+      font-weight: 750;
+    }
+
+    .services {
+      background: var(--soft-2);
+    }
+
+    .service-card a {
+      display: inline-flex;
+      margin-top: 12px;
+      font-weight: 850;
+    }
+
+    .service-card-wide {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+      background: linear-gradient(145deg, #ffffff, #eef7ff);
+    }
+
+    .mini-cta {
+      padding: 22px;
+      border-radius: 14px;
+      background: var(--ink);
+      color: #d9e2ec;
+    }
+
+    .mini-cta strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--white);
+      font-size: 1.15rem;
+    }
+
+    .mini-cta a {
+      color: #9bd8ff;
+    }
+
+    .faq-item {
+      overflow: hidden;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+    }
+
+    summary {
+      padding: 18px 20px;
+      color: var(--ink);
+      cursor: pointer;
+      font-weight: 850;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--brand);
+      font-size: 1.25rem;
+    }
+
+    details[open] summary::after {
+      content: "–";
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 20px 19px;
+      color: var(--text);
+    }
+
+    .final-cta {
+      padding: 66px 0;
+      background: linear-gradient(135deg, var(--brand-dark), var(--ink));
+      color: #d9e2ec;
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .final-cta h2 {
+      color: var(--white);
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .final-cta .button-secondary {
+      border-color: rgba(255, 255, 255, .5);
+      background: transparent;
+      color: var(--white);
+    }
+
+    .final-cta .button-secondary:hover {
+      border-color: var(--white);
+      color: var(--white);
     }
 
     footer {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      font-size: 14px;
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner p {
+      max-width: 760px;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .checker-layout,
+      .local-grid,
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        min-height: 330px;
+      }
+
+      .hero-art svg {
+        min-height: 290px;
+      }
+
+      .service-card-wide {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .header-inner {
+        padding: 12px 0;
+        align-items: flex-start;
+      }
+
+      nav a:not(.header-cta) {
+        display: none;
+      }
+
+      .facts-grid,
+      .decision-grid,
+      .service-grid,
+      .faq-grid,
+      .rule-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fact + .fact {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .hero-art {
+        min-height: 280px;
+        padding: 18px;
+      }
+
+      .hero-art svg {
+        min-height: 250px;
+      }
+
+      .service-card-wide {
+        grid-column: auto;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://windshield-usa.github.io/windshield-damage-guide/#webpage",
+        "url": "https://windshield-usa.github.io/windshield-damage-guide/",
+        "name": "Manhattan Windshield Damage Guide",
+        "description": "A practical guide to windshield repair, replacement, New York inspection rules, insurance considerations, ADAS calibration, and mobile service preparation in Manhattan.",
+        "inLanguage": "en-US",
+        "datePublished": "2026-07-29",
+        "dateModified": "2026-07-29",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://windshield-usa.github.io/#website",
+          "name": "WindshieldHUB Auto Glass Resources",
+          "url": "https://windshield-usa.github.io/"
+        },
+        "about": [
+          {"@type": "Thing", "name": "Windshield repair"},
+          {"@type": "Thing", "name": "Windshield replacement"},
+          {"@type": "Place", "name": "Manhattan, New York"}
+        ],
+        "author": {
+          "@type": "Organization",
+          "name": "WindshieldHUB",
+          "url": "https://www.windshieldhub.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "WindshieldHUB",
+          "url": "https://www.windshieldhub.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://windshield-usa.github.io/windshield-damage-guide/#breadcrumbs",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "WindshieldHUB Resources",
+            "item": "https://windshield-usa.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Manhattan Windshield Damage Guide",
+            "item": "https://windshield-usa.github.io/windshield-damage-guide/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://windshield-usa.github.io/windshield-damage-guide/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can a chipped windshield be repaired in Manhattan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Some small, clean chips can be repaired when they have not reached the windshield edge, entered the driver's primary viewing area, or spread into a longer crack. A technician must inspect the damage before confirming repair."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When does a Manhattan windshield usually need replacement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Replacement is commonly considered when damage is long, spreading, deep, at the glass edge, in the driver's main viewing area, or affecting a windshield-mounted camera area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can windshield damage cause a New York vehicle inspection problem?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "New York inspection guidance says a crack 11 inches long or longer is not allowed when any part of it is within the area cleared by the windshield wiper. Inspectors also check the windshield's presence and condition."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does New York auto insurance cover windshield damage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Glass breakage may be covered under comprehensive insurance. Deductibles and separate glass options vary by policy, so drivers should confirm their coverage with their insurer before scheduling service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is ADAS calibration needed after windshield replacement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Many vehicles with a forward-facing camera mounted near the windshield require calibration after replacement. The required method depends on the vehicle manufacturer and system."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can mobile windshield service be completed in a Manhattan parking garage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It may be possible when the garage allows service work and provides enough clearance, lighting, access, and a safe workspace. The driver should confirm garage rules before the appointment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What information is needed for an accurate windshield quote?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Provide the vehicle year, make, model, body style, ZIP code, glass location, damage type, and whether the vehicle has a camera, rain sensor, heated glass, head-up display, or other windshield technology."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How should I prepare for mobile auto-glass service in Manhattan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Choose a legal and safe work location, confirm garage or building rules, remove dashboard items, provide vehicle access, and leave enough room around the vehicle for tools and glass handling."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <main class="container">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <h1>Windshield Damage Guide for Drivers</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="WindshieldHUB Manhattan guide home">
+        Windshield<span>HUB</span> Manhattan Guide
+      </a>
 
-    <p class="intro">
-      Windshield damage can begin as a small chip and become a larger crack
-      because of road vibration, temperature changes, moisture, or additional
-      impact. Understanding the damage can help drivers decide when to request
-      a professional inspection.
-    </p>
+      <nav aria-label="Page navigation">
+        <a href="#damage-checker">Damage checker</a>
+        <a href="#ny-rules">NY rules</a>
+        <a href="#manhattan-service">Manhattan tips</a>
+        <a class="header-cta" href="https://www.windshieldhub.com/quote">Get a quote</a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>When Windshield Repair May Be Considered</h2>
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Local driver resource • Manhattan, New York</p>
 
-    <p>
-      Repair may sometimes be possible when the damage is limited, has not
-      spread significantly, and does not interfere with the driver's primary
-      viewing area. The final decision should be made after the glass is
-      inspected by a qualified auto-glass technician.
-    </p>
+          <h1>Manhattan Windshield Damage Guide</h1>
 
-    <h2>When Replacement May Be Necessary</h2>
+          <p class="hero-copy">
+            Use this practical guide to understand a chip or crack, compare repair
+            with replacement, review New York inspection and insurance considerations,
+            and prepare for mobile auto-glass service in Manhattan.
+          </p>
 
-    <p>
-      Replacement may be recommended when the crack is spreading, the glass
-      has multiple damaged areas, the inner glass layer is affected, or the
-      damage could interfere with safe visibility and windshield performance.
-    </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#damage-checker">
+              Check your damage
+            </a>
+            <a class="button button-secondary" href="https://www.windshieldhub.com/new-york/manhattan">
+              View Manhattan service
+            </a>
+          </div>
 
-    <div class="box">
-      <strong>Important:</strong> Do not rely only on photographs or online
-      advice. Windshield damage should be professionally evaluated before a
-      repair or replacement decision is made.
+          <ul class="trust-row" aria-label="Guide benefits">
+            <li>New York inspection information</li>
+            <li>Insurance checklist</li>
+            <li>ADAS guidance</li>
+          </ul>
+        </div>
+
+        <div class="hero-art" role="img" aria-label="Illustration of Manhattan buildings seen through a vehicle windshield">
+          <span class="scene-label">Manhattan driver view</span>
+
+          <svg viewBox="0 0 640 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#dff3ff"/>
+                <stop offset="100%" stop-color="#ffffff"/>
+              </linearGradient>
+              <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity=".72"/>
+                <stop offset="100%" stop-color="#99d3f4" stop-opacity=".34"/>
+              </linearGradient>
+            </defs>
+
+            <rect x="0" y="0" width="640" height="460" rx="24" fill="url(#sky)"/>
+
+            <circle cx="520" cy="72" r="36" fill="#ffcc55" opacity=".9"/>
+
+            <g opacity=".95">
+              <rect x="40" y="180" width="62" height="150" fill="#54748d"/>
+              <rect x="112" y="142" width="72" height="188" fill="#315c78"/>
+              <rect x="194" y="208" width="55" height="122" fill="#6e8798"/>
+              <rect x="260" y="116" width="92" height="214" fill="#224d69"/>
+              <rect x="365" y="167" width="64" height="163" fill="#416d88"/>
+              <rect x="439" y="128" width="78" height="202" fill="#2b5874"/>
+              <rect x="530" y="200" width="70" height="130" fill="#668397"/>
+
+              <path d="M303 116 L306 72 L309 116" fill="#224d69"/>
+            </g>
+
+            <g fill="#cfe6f2" opacity=".72">
+              <rect x="53" y="198" width="10" height="13"/>
+              <rect x="78" y="198" width="10" height="13"/>
+              <rect x="126" y="160" width="11" height="13"/>
+              <rect x="152" y="160" width="11" height="13"/>
+              <rect x="279" y="138" width="12" height="14"/>
+              <rect x="318" y="138" width="12" height="14"/>
+              <rect x="385" y="187" width="11" height="13"/>
+              <rect x="466" y="149" width="12" height="14"/>
+              <rect x="492" y="149" width="12" height="14"/>
+            </g>
+
+            <path d="M0 330 H640 V460 H0 Z" fill="#263b4d"/>
+            <path d="M270 330 L205 460 H435 L370 330 Z" fill="#3f5567"/>
+            <path d="M315 344 L310 375" stroke="#fff6c9" stroke-width="7" stroke-linecap="round"/>
+            <path d="M300 397 L292 436" stroke="#fff6c9" stroke-width="8" stroke-linecap="round"/>
+
+            <g>
+              <rect x="90" y="342" width="82" height="42" rx="12" fill="#f8b400"/>
+              <rect x="105" y="330" width="52" height="27" rx="10" fill="#f8b400"/>
+              <rect x="116" y="335" width="30" height="15" rx="4" fill="#dff3ff"/>
+              <circle cx="111" cy="386" r="10" fill="#152b3b"/>
+              <circle cx="153" cy="386" r="10" fill="#152b3b"/>
+            </g>
+
+            <g>
+              <rect x="454" y="354" width="94" height="46" rx="12" fill="#f6f7f8"/>
+              <rect x="471" y="340" width="60" height="29" rx="10" fill="#f6f7f8"/>
+              <rect x="481" y="345" width="40" height="16" rx="4" fill="#cfeaf8"/>
+              <circle cx="478" cy="401" r="10" fill="#152b3b"/>
+              <circle cx="527" cy="401" r="10" fill="#152b3b"/>
+            </g>
+
+            <path d="M38 36 C110 12 180 15 250 33 C335 54 420 50 602 20"
+                  fill="none" stroke="#173b52" stroke-width="18" stroke-linecap="round"/>
+            <path d="M28 50 C85 105 98 250 78 425"
+                  fill="none" stroke="#173b52" stroke-width="22" stroke-linecap="round"/>
+            <path d="M612 38 C555 98 544 246 566 426"
+                  fill="none" stroke="#173b52" stroke-width="22" stroke-linecap="round"/>
+            <path d="M80 425 C205 393 432 393 566 426"
+                  fill="none" stroke="#173b52" stroke-width="25" stroke-linecap="round"/>
+
+            <path d="M85 62 C185 88 426 87 558 51 C525 128 520 264 542 393
+                     C420 368 208 368 103 395 C123 260 116 137 85 62 Z"
+                  fill="url(#glass)" stroke="#7fb6d5" stroke-width="3"/>
+
+            <path d="M426 95 l-18 28 15 12-24 37 13 7-18 28"
+                  fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M408 123 l-20 -8 M423 136 l24 3 M399 171 l-20 7"
+                  fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-facts">
+      <div class="container facts-grid">
+        <div class="fact">
+          <strong>Do not ignore spreading damage</strong>
+          <span>Temperature changes and vibration can make a chip or crack grow.</span>
+        </div>
+        <div class="fact">
+          <strong>New York inspections check glass</strong>
+          <span>Windshield condition and the wiper-cleared viewing area matter.</span>
+        </div>
+        <div class="fact">
+          <strong>Camera-equipped vehicles need review</strong>
+          <span>Windshield replacement may require ADAS camera calibration.</span>
+        </div>
+      </div>
     </div>
 
-    <h2>Why ADAS Calibration Matters</h2>
+    <section class="checker" id="damage-checker">
+      <div class="container">
+        <p class="eyebrow">Interactive tool</p>
+        <h2>Windshield chip or crack checker</h2>
+        <p class="section-intro">
+          Answer four quick questions for general guidance. This tool does not replace
+          a physical inspection and does not guarantee that repair is possible.
+        </p>
 
-    <p>
-      Many modern vehicles have cameras or sensors positioned near the
-      windshield. Depending on the vehicle, these systems may support lane
-      assistance, forward-collision alerts, traffic-sign recognition, or
-      automatic emergency braking.
-    </p>
+        <div class="checker-layout">
+          <form class="card form-card" id="damageForm">
+            <div class="form-grid">
+              <div>
+                <label for="damageType">What type of damage do you see?</label>
+                <select id="damageType" required>
+                  <option value="chip">Small chip or star break</option>
+                  <option value="short-crack">Short crack</option>
+                  <option value="long-crack">Long or spreading crack</option>
+                  <option value="shattered">Shattered or heavily damaged glass</option>
+                </select>
+              </div>
 
-    <p>
-      When windshield replacement changes the position of a camera or sensor,
-      calibration may be required according to the vehicle's procedures.
-    </p>
+              <div>
+                <label for="damageLocation">Where is the damage?</label>
+                <select id="damageLocation" required>
+                  <option value="outside-view">Outside the driver's main view</option>
+                  <option value="driver-view">Inside the driver's main view</option>
+                  <option value="edge">At or very close to the windshield edge</option>
+                  <option value="camera">Near a windshield camera or sensor</option>
+                </select>
+              </div>
 
-    <h2>What Drivers Should Do After Windshield Damage</h2>
+              <div>
+                <label for="damageAge">Has the damage changed?</label>
+                <select id="damageAge" required>
+                  <option value="stable">It appears stable</option>
+                  <option value="growing">It is spreading or getting longer</option>
+                  <option value="dirty">It is old, dirty, or moisture has entered</option>
+                </select>
+              </div>
 
-    <ol>
-      <li>Photograph the damaged area.</li>
-      <li>Avoid pressing or touching the chip or crack.</li>
-      <li>Keep moisture and dirt away from the damaged area.</li>
-      <li>Check whether glass coverage is included in your insurance policy.</li>
-      <li>Arrange a professional auto-glass inspection.</li>
-    </ol>
+              <div>
+                <label for="vehicleTech">Does the vehicle have windshield technology?</label>
+                <select id="vehicleTech" required>
+                  <option value="unknown">I am not sure</option>
+                  <option value="none">No visible camera or sensor</option>
+                  <option value="adas">Camera, rain sensor, head-up display, or heated glass</option>
+                </select>
+              </div>
 
-    <h2>Professional Auto-Glass Assistance</h2>
+              <button class="check-button" type="submit">
+                Show general guidance
+              </button>
+            </div>
+          </form>
 
-    <p>
-      WindshieldHUB provides windshield replacement, windshield repair,
-      vehicle side-glass replacement, back-glass replacement, mobile service,
-      insurance assistance, and ADAS calibration support.
-    </p>
+          <div class="card result-card" aria-live="polite">
+            <p class="result-label">Your result</p>
+            <h3 id="resultTitle">Start with the four questions</h3>
+            <p id="resultText">
+              Your answers will produce a cautious repair-or-replacement recommendation
+              and identify whether ADAS review may be necessary.
+            </p>
 
-    <p>
-      Visit
-      <a href="https://www.windshieldhub.com/new-york/manhattan/windshield-replacement" target="_blank" rel="noopener">
-        Windshield Replacement Manhattan
-      </a>
-      to learn more or request auto-glass service.
-    </p>
+            <div class="disclaimer">
+              Safety note: avoid driving when damage seriously blocks visibility,
+              the glass is unstable, or loose glass could enter the vehicle.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <a
-      class="button"
-      href="https://www.windshieldhub.com/"
-      target="_blank"
-      rel="noopener"
-    >
-      Request an Auto-Glass Quote
-    </a>
+    <section id="repair-or-replace">
+      <div class="container">
+        <p class="eyebrow">Decision guide</p>
+        <h2>Repair versus replacement</h2>
+        <p class="section-intro">
+          The correct option depends on the damage size, depth, location, age,
+          contamination, and the vehicle's windshield technology.
+        </p>
 
-<h2>Professional Auto-Glass Resources</h2>
+        <div class="decision-grid">
+          <article class="card decision-card">
+            <span class="status status-repair">Repair may be considered</span>
+            <h3>Small, limited damage</h3>
+            <ul>
+              <li>The chip is small and has not developed into a long crack.</li>
+              <li>The damage is not directly in the driver's primary viewing area.</li>
+              <li>The break is not touching the windshield edge.</li>
+              <li>The damaged area is reasonably clean and dry.</li>
+              <li>The inner glass layer does not appear affected.</li>
+            </ul>
+          </article>
 
-<ul>
-  <li>
-    Learn about
-    <a href="https://www.windshieldhub.com/new-york/manhattan/windshield-repair">
-      professional windshield manhattan repair
-    </a>.
-  </li>
+          <article class="card decision-card">
+            <span class="status status-replace">Replacement may be necessary</span>
+            <h3>Safety or structural concerns</h3>
+            <ul>
+              <li>The crack is long, spreading, or connected to another break.</li>
+              <li>The damage is at the edge, where windshield stress is higher.</li>
+              <li>The driver's visibility is meaningfully obstructed.</li>
+              <li>The glass is shattered, deeply damaged, or separating.</li>
+              <li>The damage affects a camera, sensor, or complex glass feature.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <li>
-    Explore
-    <a href="https://www.windshieldhub.com/new-york/manhattan/services">
-      WindshieldHUB manhattan auto-glass services
-    </a>.
-  </li>
+    <section class="ny-rules" id="ny-rules">
+      <div class="container">
+        <p class="eyebrow">New York driver information</p>
+        <h2>Inspection and insurance considerations</h2>
+        <p class="section-intro" style="color:#b8cbd9">
+          These summaries are for general education. Always check current state guidance
+          and your individual insurance policy.
+        </p>
 
-  <li>
-    Understand when a vehicle may need
-    <a href="https://www.windshieldhub.com/new-york/manhattan/adas-calibration">
-      ADAS calibration New York
-    </a>.
-  </li>
-</ul>
-    
-    <footer>
-      <p>
-        This resource provides general educational information. Vehicle
-        requirements and repair recommendations can vary depending on the
-        damage, glass construction, safety systems, and manufacturer
-        procedures.
-      </p>
-    </footer>
+        <div class="rule-grid">
+          <article class="rule-card">
+            <h3>New York vehicle inspection</h3>
+            <p>
+              New York DMV states that inspectors check the presence and condition of
+              the windshield. A crack measuring 11 inches or longer is not allowed when
+              any part of that crack lies within the area cleared by the windshield wiper.
+            </p>
+            <p>
+              Read the official
+              <a href="https://dmv.ny.gov/new-york-state-vehicle-safetyemissions-inspection-program">
+                New York State vehicle inspection requirements
+              </a>.
+            </p>
+          </article>
 
+          <article class="rule-card">
+            <h3>Comprehensive and glass coverage</h3>
+            <p>
+              New York's Department of Financial Services explains that comprehensive
+              coverage can include glass breakage. Some policies apply a deductible,
+              while others may offer glass coverage where the deductible does not apply.
+            </p>
+            <p>
+              Review the official
+              <a href="https://www.dfs.ny.gov/consumers/auto_insurance/Auto_resource_center">
+                New York auto insurance resource centre
+              </a>.
+            </p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>Before filing a claim:</strong>
+          photograph the damage, note when it happened, review your comprehensive
+          deductible, ask whether calibration is covered, and confirm whether your
+          insurer requires a particular claim process.
+        </div>
+      </div>
+    </section>
+
+    <section id="manhattan-service">
+      <div class="container">
+        <p class="eyebrow">Local preparation</p>
+        <h2>Planning mobile auto-glass service in Manhattan</h2>
+        <p class="section-intro">
+          Manhattan parking, garage rules, building access, and limited curb space can
+          affect where a technician can work. A few preparations can prevent delays.
+        </p>
+
+        <div class="local-grid">
+          <div>
+            <ol class="prep-list">
+              <li>
+                <strong>Choose a legal and safe work area.</strong><br>
+                Avoid active traffic lanes, hydrants, loading restrictions, and places
+                where doors or tools cannot be used safely.
+              </li>
+              <li>
+                <strong>Confirm garage or building permission.</strong><br>
+                Ask whether mobile vehicle service is allowed and whether the space has
+                sufficient lighting, ventilation, clearance, and access.
+              </li>
+              <li>
+                <strong>Plan around parking restrictions.</strong><br>
+                Consider alternate-side parking, metered time limits, commercial zones,
+                and building delivery schedules before selecting the appointment window.
+              </li>
+              <li>
+                <strong>Prepare the vehicle.</strong><br>
+                Remove dashboard items, provide keys, unlock the vehicle, and leave room
+                around the windshield for safe glass handling.
+              </li>
+              <li>
+                <strong>Share complete vehicle details.</strong><br>
+                Provide the VIN when requested and mention cameras, rain sensors,
+                head-up display, heated glass, or other windshield features.
+              </li>
+            </ol>
+          </div>
+
+          <aside class="neighborhood-box">
+            <h3>Manhattan areas commonly searched for auto-glass help</h3>
+            <p>
+              Mobile availability depends on technician scheduling, parking access,
+              weather, vehicle requirements, and a safe work location.
+            </p>
+
+            <ul class="tag-list" aria-label="Manhattan neighborhoods">
+              <li>Financial District</li>
+              <li>Tribeca</li>
+              <li>SoHo</li>
+              <li>Lower East Side</li>
+              <li>East Village</li>
+              <li>Greenwich Village</li>
+              <li>Chelsea</li>
+              <li>Flatiron District</li>
+              <li>Gramercy</li>
+              <li>Kips Bay</li>
+              <li>Murray Hill</li>
+              <li>Midtown</li>
+              <li>Hell's Kitchen</li>
+              <li>Upper East Side</li>
+              <li>Upper West Side</li>
+              <li>Morningside Heights</li>
+              <li>Harlem</li>
+              <li>East Harlem</li>
+              <li>Washington Heights</li>
+              <li>Inwood</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <p class="eyebrow">Professional resources</p>
+        <h2>Explore Manhattan auto-glass services</h2>
+        <p class="section-intro">
+          Use the links below when you are ready for a vehicle-specific assessment,
+          quote, or appointment.
+        </p>
+
+        <div class="service-grid">
+          <article class="card service-card">
+            <h3>Manhattan windshield replacement</h3>
+            <p>
+              Review mobile replacement information, workmanship details, insurance
+              assistance, and Manhattan service availability.
+            </p>
+            <a href="https://www.windshieldhub.com/new-york/manhattan">
+              Manhattan auto-glass service →
+            </a>
+          </article>
+
+          <article class="card service-card">
+            <h3>Windshield chip and crack repair</h3>
+            <p>
+              Learn how technicians assess repairable damage and why early inspection
+              can help prevent a chip from spreading.
+            </p>
+            <a href="https://www.windshieldhub.com/windshield-repair">
+              Windshield repair information →
+            </a>
+          </article>
+
+          <article class="card service-card">
+            <h3>ADAS camera calibration</h3>
+            <p>
+              Understand static, dynamic, and dual calibration for vehicles with
+              windshield-mounted cameras and driver-assistance systems.
+            </p>
+            <a href="https://www.windshieldhub.com/adas-calibration">
+              ADAS calibration guide →
+            </a>
+          </article>
+
+          <article class="card service-card">
+            <h3>All auto-glass services</h3>
+            <p>
+              Explore windshield, door glass, back glass, side glass, and related
+              vehicle-glass services.
+            </p>
+            <a href="https://www.windshieldhub.com/our-services">
+              View auto-glass services →
+            </a>
+          </article>
+
+          <article class="card service-card service-card-wide">
+            <div>
+              <h3>Get a vehicle-specific quote</h3>
+              <p>
+                Accurate pricing depends on your vehicle year, make, model, body style,
+                ZIP code, glass type, technology, and insurance preferences.
+              </p>
+              <a href="https://www.windshieldhub.com/quote">
+                Start a WindshieldHUB quote →
+              </a>
+            </div>
+
+            <div class="mini-cta">
+              <strong>Prefer to speak with someone?</strong>
+              Call
+              <a href="tel:+18007111669">1-800-711-1669</a>
+              for scheduling and auto-glass assistance.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2>Manhattan windshield questions</h2>
+        <p class="section-intro">
+          These answers provide general guidance. Vehicle-specific decisions require
+          an inspection and confirmation of the correct glass and technology.
+        </p>
+
+        <div class="faq-grid">
+          <details>
+            <summary>Can a chipped windshield be repaired in Manhattan?</summary>
+            <p>
+              Some small, clean chips can be repaired when they have not reached the
+              windshield edge, entered the driver's primary viewing area, or spread
+              into a longer crack. A technician must inspect the damage before
+              confirming repair.
+            </p>
+          </details>
+
+          <details>
+            <summary>When does a Manhattan windshield usually need replacement?</summary>
+            <p>
+              Replacement is commonly considered when damage is long, spreading, deep,
+              at the glass edge, in the driver's main viewing area, or affecting a
+              windshield-mounted camera area.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can damage cause a New York inspection problem?</summary>
+            <p>
+              New York inspection guidance says a crack 11 inches long or longer is not
+              allowed when any part of it is within the area cleared by the windshield
+              wiper. Inspectors also check the windshield's presence and condition.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does New York insurance cover windshield damage?</summary>
+            <p>
+              Glass breakage may be covered under comprehensive insurance. Deductibles
+              and separate glass options vary by policy, so confirm coverage with your
+              insurer before scheduling service.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is ADAS calibration needed after replacement?</summary>
+            <p>
+              Many vehicles with a forward-facing camera mounted near the windshield
+              require calibration after replacement. The required method depends on the
+              vehicle manufacturer and system.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can service be completed in a Manhattan parking garage?</summary>
+            <p>
+              It may be possible when the garage allows service work and provides enough
+              clearance, lighting, access, and a safe workspace. Confirm garage rules
+              before the appointment.
+            </p>
+          </details>
+
+          <details>
+            <summary>What information is needed for an accurate quote?</summary>
+            <p>
+              Provide the vehicle year, make, model, body style, ZIP code, glass location,
+              damage type, and whether the vehicle has a camera, rain sensor, heated glass,
+              head-up display, or other windshield technology.
+            </p>
+          </details>
+
+          <details>
+            <summary>How should I prepare for mobile service?</summary>
+            <p>
+              Choose a legal and safe work location, confirm garage or building rules,
+              remove dashboard items, provide vehicle access, and leave enough room
+              around the vehicle for tools and glass handling.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Need help with damaged auto glass in Manhattan?</h2>
+          <p>
+            Submit your vehicle information for a personalised quote, or review the
+            dedicated Manhattan service page before scheduling.
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a class="button button-primary" href="https://www.windshieldhub.com/quote">
+            Get an instant quote
+          </a>
+          <a class="button button-secondary" href="https://www.windshieldhub.com/new-york/manhattan">
+            Manhattan service page
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>
+        This independent educational resource is published by WindshieldHUB.
+        It does not replace a technician's inspection, insurer guidance,
+        vehicle-manufacturer procedures, or current New York regulations.
+      </p>
+
+      <p>
+        Updated <time datetime="2026-07-29">29 July 2026</time>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("damageForm");
+    const resultTitle = document.getElementById("resultTitle");
+    const resultText = document.getElementById("resultText");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const type = document.getElementById("damageType").value;
+      const location = document.getElementById("damageLocation").value;
+      const age = document.getElementById("damageAge").value;
+      const tech = document.getElementById("vehicleTech").value;
+
+      let replacementSignals = 0;
+      let repairSignals = 0;
+      let adasNote = "";
+
+      if (type === "chip") repairSignals += 2;
+      if (type === "short-crack") repairSignals += 1;
+      if (type === "long-crack") replacementSignals += 3;
+      if (type === "shattered") replacementSignals += 5;
+
+      if (location === "outside-view") repairSignals += 1;
+      if (location === "driver-view") replacementSignals += 2;
+      if (location === "edge") replacementSignals += 3;
+      if (location === "camera") replacementSignals += 2;
+
+      if (age === "stable") repairSignals += 1;
+      if (age === "growing") replacementSignals += 3;
+      if (age === "dirty") replacementSignals += 1;
+
+      if (tech === "adas" || location === "camera") {
+        adasNote =
+          " Because windshield technology may be involved, ask whether camera or sensor calibration is required.";
+      } else if (tech === "unknown") {
+        adasNote =
+          " Check behind the rear-view mirror for a camera housing and mention any rain sensor, head-up display, or heated glass when requesting a quote.";
+      }
+
+      if (type === "shattered") {
+        resultTitle.textContent = "Avoid driving and arrange professional help";
+        resultText.textContent =
+          "Heavily damaged or shattered glass can create visibility, containment, and loose-glass risks. Keep people away from the glass and arrange a professional replacement assessment." +
+          adasNote;
+        return;
+      }
+
+      if (replacementSignals >= repairSignals + 2) {
+        resultTitle.textContent = "Replacement assessment is the safer next step";
+        resultText.textContent =
+          "Your answers include one or more warning signs such as spreading damage, edge damage, driver-view obstruction, or camera-area involvement. A technician should inspect the windshield and confirm the correct replacement glass." +
+          adasNote;
+      } else {
+        resultTitle.textContent = "Repair may be possible, but act quickly";
+        resultText.textContent =
+          "Your answers are more consistent with limited damage that may be repairable. Keep the area clean and dry, avoid pressing the glass, and schedule an inspection before the damage spreads." +
+          adasNote;
+      }
+    });
+  </script>
 </body>
 </html>
